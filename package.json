@@ -1,18 +1,28 @@
 {
-  "name": "discord-bot",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Nguyen Minh Tri",
-  "license": "MIT",
-  "dependencies": {
-    "discord.js": "^14.17.3",
-    "dotenv": "^16.4.7"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.18.0",
-    "eslint": "^9.18.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.4.2"
-  }
+	"name": "discord-bot",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Nguyen Minh Tri",
+	"license": "MIT",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"start": "node dist/index.js",
+		"build": "tsup src/index.ts --minify",
+		"lint:fix": "eslint . --fix",
+		"prettier": "prettier --check \"src/**/(*.ts)\"",
+		"prettier:fix": "prettier --write \"src/**/(*.ts)\""
+	},
+	"dependencies": {
+		"discord.js": "^14.17.3",
+		"dotenv": "^16.4.7"
+	},
+	"devDependencies": {
+		"eslint": "^9.18.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-prettier": "^5.2.1",
+		"prettier": "^3.4.2",
+		"tsup": "^8.3.5",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3"
+	}
 }
